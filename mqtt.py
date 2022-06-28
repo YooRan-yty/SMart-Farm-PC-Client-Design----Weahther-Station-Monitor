@@ -4,9 +4,9 @@ import json
 import threading
 
 class Mqtt(object):
-    def __init__(self,host="47.107.235.156",port=1883,keepalive=10,topic="testtopic/1",username="yty",password="123",on_connect=None,on_message=None):
+    def __init__(self,host="  ",port=1883,keepalive=10,topic=" ",username=" ",password=" ",on_connect=None,on_message=None):
         self.client = mqtt_client.Client()
-        self.client.username_pw_set("yty","123")
+        self.client.username_pw_set(" "," ")
         self.client.on_connect = on_connect
         self.client.on_message = on_message
         self.host = host
