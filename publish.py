@@ -4,17 +4,17 @@ import json
 
 def on_connect(client, userdata, flags, rc):
 	print("Connected with result code: " + str(rc))
-	client.subscribe("testtopic/1")
+	client.subscribe(" ")
 
 def on_message(client, userdata, msg):
 	print(msg.topic + " " + str(msg.payload))
 
 client = mqtt.Client()
-client.username_pw_set("yty","123")
+client.username_pw_set(" "," ")
 client.on_connect = on_connect
 client.on_message = on_message
 
-client.connect(host="47.107.235.156",port=1883,keepalive=10)
+client.connect(host=" ",port=1883,keepalive=10)
 time.sleep(1)
 msg = [
 	{"messageClass": "sensorData", "deviceID": "3010", "typeID": "106", "windspeed": 0.0, "voletage": 3.74, "timestamp": "2021-06-18 17:00:45"},
